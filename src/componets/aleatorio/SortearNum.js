@@ -1,6 +1,6 @@
 import React from "react"
 
-export default (props) => {
+const sortearNum = (props) => {
     const { min, max } = props
     return (
     <>
@@ -13,3 +13,5 @@ export default (props) => {
 function getRandomNumber(min, max) {
     return Math.random() * (max - min) + min;
   }
+
+  export default sortearNum

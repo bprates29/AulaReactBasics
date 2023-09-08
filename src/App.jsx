@@ -5,10 +5,17 @@ import ComParametro from './componets/segundo/ComParametro'
 import Fragmento from "./componets/erros/Fragmentos"
 import SortearNum from "./componets/aleatorio/SortearNum"
 import Familia from "./componets/filhos/Familia"
+import FamiliaMembro from "./componets/filhos/FamiliaMembro"
+import ListaEventos from "./componets/repeticao/ListaEventos"
 
-export default () => (
+const app = () => (
     <div>
-        <Familia sobrenome="Prates"></Familia>
+        <ListaEventos/>
+        <Familia sobrenome="Prates">
+            <FamiliaMembro nome="Bernardo"/>
+            <FamiliaMembro nome="Ciclano"/>
+            <FamiliaMembro nome="Fulano"/>
+        </Familia>
 
         <SortearNum min={1} max={60}/>
         <Fragmento></Fragmento>
@@ -17,3 +24,5 @@ export default () => (
             data="29/11/2024" />
     </div>
 );
+
+export default app
