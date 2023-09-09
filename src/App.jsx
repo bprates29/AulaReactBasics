@@ -8,9 +8,13 @@ import Familia from "./componets/filhos/Familia"
 import FamiliaMembro from "./componets/filhos/FamiliaMembro"
 import ListaEventos from "./componets/repeticao/ListaEventos"
 import ParOuImpar from "./componets/condicional/ParOuImpar"
+import UsuarioInfo from "./componets/condicional/UsuarioInfo"
 
 const app = () => (
     <div>
+        <UsuarioInfo usuario={{nome:'Bernardo'}}></UsuarioInfo>
+        <UsuarioInfo usuario={{email:'Bernardo'}}></UsuarioInfo>
+
         <ParOuImpar numero={123}/>
 
         <ListaEventos/>
