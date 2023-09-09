@@ -9,9 +9,11 @@ import FamiliaMembro from "./componets/filhos/FamiliaMembro"
 import ListaEventos from "./componets/repeticao/ListaEventos"
 import ParOuImpar from "./componets/condicional/ParOuImpar"
 import UsuarioInfo from "./componets/condicional/UsuarioInfo"
+import UsuarioInfoElse from "./componets/condicional/UsuarioInfoElse"
 
 const app = () => (
     <div>
+        <UsuarioInfoElse usuario={{nome:'Fulano'}}/>
         <UsuarioInfo usuario={{nome:'Bernardo'}}></UsuarioInfo>
         <UsuarioInfo usuario={{email:'Bernardo'}}></UsuarioInfo>
 
