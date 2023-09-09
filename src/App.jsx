@@ -7,9 +7,12 @@ import SortearNum from "./componets/aleatorio/SortearNum"
 import Familia from "./componets/filhos/Familia"
 import FamiliaMembro from "./componets/filhos/FamiliaMembro"
 import ListaEventos from "./componets/repeticao/ListaEventos"
+import ParOuImpar from "./componets/condicional/ParOuImpar"
 
 const app = () => (
     <div>
+        <ParOuImpar numero={123}/>
+
         <ListaEventos/>
         <Familia sobrenome="Prates">
             <FamiliaMembro nome="Bernardo"/>
