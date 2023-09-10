@@ -11,9 +11,12 @@ import ParOuImpar from "./componets/condicional/ParOuImpar"
 import UsuarioInfo from "./componets/condicional/UsuarioInfo"
 import UsuarioInfoElse from "./componets/condicional/UsuarioInfoElse"
 import DiretaPai from './componets/comunicacao/DiretaPai'
+import IndiretaPai from './componets/comunicacao/IndiretaPai'
 
 const app = () => (
     <div>
+        <IndiretaPai/>
+
         <DiretaPai/>
 
         <UsuarioInfoElse usuario={{nome:'Fulano'}}/>
@@ -24,9 +27,9 @@ const app = () => (
 
         <ListaEventos/>
         <Familia sobrenome="Prates">
-            <FamiliaMembro nome="Bernardo"/>
-            <FamiliaMembro nome="Ciclano"/>
-            <FamiliaMembro nome="Fulano"/>
+            <FamiliaMembro key={1} nome="Bernardo"/>
+            <FamiliaMembro key={2} nome="Ciclano"/>
+            <FamiliaMembro key={3} nome="Fulano"/>
         </Familia>
 
         <SortearNum min={1} max={60}/>
