@@ -12,27 +12,33 @@ import UsuarioInfo from "./componets/condicional/UsuarioInfo"
 import UsuarioInfoElse from "./componets/condicional/UsuarioInfoElse"
 import DiretaPai from './componets/comunicacao/DiretaPai'
 import IndiretaPai from './componets/comunicacao/IndiretaPai'
+import Input from './componets/controlado/input'
+import Contador from './componets/contador/Contador'
 
 const app = () => (
     <div>
-        <IndiretaPai/>
+        <Contador numeroInicial={10}/>
 
-        <DiretaPai/>
+        <Input />
 
-        <UsuarioInfoElse usuario={{nome:'Fulano'}}/>
-        <UsuarioInfo usuario={{nome:'Bernardo'}}></UsuarioInfo>
-        <UsuarioInfo usuario={{email:'Bernardo'}}></UsuarioInfo>
+        <IndiretaPai />
 
-        <ParOuImpar numero={123}/>
+        <DiretaPai />
 
-        <ListaEventos/>
+        <UsuarioInfoElse usuario={{ nome: 'Fulano' }} />
+        <UsuarioInfo usuario={{ nome: 'Bernardo' }}></UsuarioInfo>
+        <UsuarioInfo usuario={{ email: 'Bernardo' }}></UsuarioInfo>
+
+        <ParOuImpar numero={123} />
+
+        <ListaEventos />
         <Familia sobrenome="Prates">
-            <FamiliaMembro key={1} nome="Bernardo"/>
-            <FamiliaMembro key={2} nome="Ciclano"/>
-            <FamiliaMembro key={3} nome="Fulano"/>
+            <FamiliaMembro key={1} nome="Bernardo" />
+            <FamiliaMembro key={2} nome="Ciclano" />
+            <FamiliaMembro key={3} nome="Fulano" />
         </Familia>
 
-        <SortearNum min={1} max={60}/>
+        <SortearNum min={1} max={60} />
         <Fragmento></Fragmento>
         <Comp></Comp>
         <ComParametro nome="UPF em dança"
