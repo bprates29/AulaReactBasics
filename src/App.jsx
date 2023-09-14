@@ -14,10 +14,16 @@ import DiretaPai from './componets/comunicacao/DiretaPai'
 import IndiretaPai from './componets/comunicacao/IndiretaPai'
 import Input from './componets/controlado/input'
 import Contador from './componets/contador/Contador'
+import UseEffects from './componets/hooks/StateEffects'
+import UseRef from "./componets/hooks/UseRef"
 
 const app = () => (
     <div>
-        <Contador numeroInicial={10}/>
+<UseRef />
+
+        <UseEffects />
+
+        <Contador numeroInicial={10} />
 
         <Input />
 
