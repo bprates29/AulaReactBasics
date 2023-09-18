@@ -16,10 +16,19 @@ import Input from './componets/controlado/input'
 import Contador from './componets/contador/Contador'
 import UseEffects from './componets/hooks/StateEffects'
 import UseRef from "./componets/hooks/UseRef"
+import UseMemo from "./componets/hooks/UseMemo"
+import UseCallback from "./componets/hooks/UseCallback"
+import UseContext from "./componets/hooks/UseContext"
 
 const app = () => (
     <div>
-<UseRef />
+        <UseContext/>
+
+        <UseCallback />
+        
+        <UseMemo />
+
+        <UseRef />
 
         <UseEffects />
 
