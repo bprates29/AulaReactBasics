@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 
-const initialState = { operando: 0, operador: 1, result: 0 };
+const initialState = { operando: 0, operador: 1, result: 0, operacao: "" };
 
 function CalcReducer(state, action) {
     switch (action.type) {
@@ -9,13 +9,13 @@ function CalcReducer(state, action) {
         case 'setOperador':
             return { ...state, operador: action.payload };
         case 'soma':
-            return { ...state, result: state.operando + state.operador };
+            return { ...state, result: state.operando + state.operador, operacao: "+" };
         case 'subtrai':
-            return { ...state, result: state.operando - state.operador };
+            return { ...state, result: state.operando - state.operador, operacao: "-" };
         case 'multiplica':
-            return { ...state, result: state.operando * state.operador };
+            return { ...state, result: state.operando * state.operador, operacao: "*" };
         case 'divide':
-            return { ...state, result: state.operando / state.operador };
+            return { ...state, result: state.operando / state.operador, operacao: "/" };
         case 'limpa':
             return initialState;
         default:
@@ -29,6 +29,7 @@ export default function CalculadoraReducer() {
     return (
         <div style={{margin:'10px'}}>
             <h2>Resultado: <strong>{state.result}</strong></h2>
+            <h3>Operador: <strong>{state.operacao}</strong></h3>
             <div>Operando: <input type="number" value={state.operando}
                 onChange={e => dispatch({ type: 'setOperando', payload: +e.target.value })} />
             </div>
