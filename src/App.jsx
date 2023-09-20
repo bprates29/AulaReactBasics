@@ -19,9 +19,11 @@ import UseRef from "./componets/hooks/UseRef"
 import UseMemo from "./componets/hooks/UseMemo"
 import UseCallback from "./componets/hooks/UseCallback"
 import UseContext from "./componets/hooks/UseContext"
+import UseReducer from "./componets/hooks/UseReducer"
 
 const app = () => (
     <div>
+        <UseReducer/>
         <UseContext/>
 
         <UseCallback />
